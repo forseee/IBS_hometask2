@@ -8,7 +8,6 @@ body {
   padding: 0 24px;
 }
 .conteiner {
-  max-width: 1448px;
   margin: 0 auto;
 }
 .header {
@@ -31,10 +30,8 @@ body {
   background-repeat: no-repeat;
   background-position: 0px 8px;
   outline: none;
-  padding-left: 32px;
-  width: 300px;
-  height: 40px;
   border-bottom: 2px solid #e97f03;
+  transition: all 0.2s;
 }
 .header__search:focus::placeholder {
   color: transparent;
@@ -84,11 +81,12 @@ body {
 .basket__item {
   display: flex;
 }
-.basket__item-img-wrapper{
-  padding: 50px 76px 50px 75px;
-}
-.basket__img {
-  align-self: center;
+.basket__item-img-wrapper {
+  min-width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .basket__item-description {
 }
@@ -127,7 +125,7 @@ body {
 }
 .btn__minus {
   border: 1px solid #323232;
-  padding: 5px 9px;
+  padding: 9px 9px;
 }
 .btn__input {
   border: 1px solid #323232;
@@ -139,19 +137,24 @@ body {
 }
 .btn__plus {
   border: 1px solid #323232;
-  padding: 5px 9px;
+  padding: 9px 9px;
 }
 .basket__btn-add {
   background-color: #e97f03;
-  padding: 8px 20px;
+  padding: 3px 20px;
   color: #ffffff;
   font-size: 24px;
   line-height: 28px;
   border-radius: 10px;
   margin: 0 16px;
 }
+.basket__btn-add:hover {
+  background-color: #e99330;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
 @media (max-width: 510px) {
-  .header__item-link{
+  .header__item-link {
     margin-left: 8px;
   }
   .item-link {
@@ -189,7 +192,7 @@ body {
   .basket__item {
     display: block;
   }
-  .basket__item-img-wrapper{
+  .basket__item-img-wrapper {
     display: flex;
     justify-content: center;
     margin: 0 -24px 16px;
