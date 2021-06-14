@@ -83,3 +83,12 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0 24px;
+}
