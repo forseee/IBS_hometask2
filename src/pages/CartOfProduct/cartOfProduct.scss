@@ -1,82 +1,5 @@
-@import url('./basecss.css');
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  padding: 0 24px;
-}
 .conteiner {
   margin: 0 auto;
-}
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 16px 0 24px;
-}
-.header__search {
-  background-image: url(../img/search.svg);
-  background-repeat: no-repeat;
-  background-position: 0 8px;
-  outline: none;
-  padding-left: 32px;
-  width: 300px;
-  height: 40px;
-  transition: all 0.2s;
-}
-.header__search:focus {
-  background-image: url(../img//search_active.svg);
-  background-repeat: no-repeat;
-  background-position: 0px 8px;
-  outline: none;
-  border-bottom: 2px solid #e97f03;
-}
-.header__search:focus::placeholder {
-  color: transparent;
-}
-.header__search::placeholder {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #000000;
-}
-.header__item-link {
-  margin-left: 18px;
-}
-.products-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -8px;
-}
-.products-inner__item {
-  max-width: 220px;
-  height: 272px;
-  margin: 8px 8px;
-  padding: 40px 0 24px;
-  text-align: center;
-  position: relative;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-.products-inner__item:hover {
-  background-color: #f2f2f2;
-}
-.item__like-btn {
-  position: absolute;
-  top: 11px;
-  right: 10px;
-}
-.item__text {
-  color: #000000;
-  margin-bottom: 19px;
-}
-.item__price {
-  color: #545454;
 }
 .basket__item {
   display: flex;
@@ -109,6 +32,7 @@ body {
 }
 .basket__item-menu {
   display: flex;
+  position: relative;
 }
 .basket__item-prise {
   font-size: 36px;
@@ -153,23 +77,7 @@ body {
   background-color: #e99330;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-@media (max-width: 510px) {
-  .header__item-link {
-    margin-left: 8px;
-  }
-  .item-link {
-    width: 155px;
-  }
-  .item__img {
-    width: 155px;
-    height: 140px;
-    object-fit: none;
-  }
-}
 @media (max-width: 890px) {
-  .header__search {
-    width: 200px;
-  }
   .basket__item-menu {
     display: block;
     position: relative;
