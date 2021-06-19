@@ -1,22 +1,21 @@
 import React from 'react';
-import './productItem.scss';
+import style from './productItem.module.scss';
 import ButtonLike from '../ButtonLike/ButtonLike';
+import { Link } from 'react-router-dom';
 
-export class ProductItem extends React.Component {
-  render() {
-    return (
-      <a href="/" className="item-link" onClick={() => this.props.getDataById(this.props.id)}>
-        <div className="products-inner__item">
-          <ButtonLike like={this.props.like}/>
-          <img
-            className="item__img"
-            src={`http://localhost:3007${this.props.picture.path}`}
-            alt={this.props.picture.alt}
-          />
-          <p className="item__text">{this.props.name}</p>
-          <p className="item__price">{this.props.prise}</p>
-        </div>
-      </a>
-    );
-  }
-}
+export const ProductItem = (props) => {
+  return (
+    <Link to={{ pathname: '/item', search: `?id=${props.id}` }} className="item-link">
+      <div className={style.inner}>
+        <ButtonLike like={props.like} />
+        <img
+          className={style.item__img}
+          src={`http://localhost:3006${props.picturePatch}`}
+          alt={props.pictureAlt}
+        />
+        <p className={style.item__text}>{props.name}</p>
+        <p className={style.item__price}>${props.price}</p>
+      </div>
+    </Link>
+  );
+};

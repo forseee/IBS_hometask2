@@ -1,22 +1,22 @@
-
-.products-inner__item {
-  max-width: 220px;
+.inner {
+  width: 220px;
   height: 272px;
   margin: 8px 8px;
   padding: 40px 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   position: relative;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  &:hover {
+    background-color: #f2f2f2;
+  }
 }
-.products-inner__item:hover {
-  background-color: #f2f2f2;
-}
-.item__like-btn {
-  position: absolute;
-  top: 11px;
-  right: 10px;
+.item__img {
+  margin-bottom: 20px;
 }
 .item__text {
   color: #000000;
