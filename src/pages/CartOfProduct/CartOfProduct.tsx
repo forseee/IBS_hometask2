@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import './cartOfProduct.scss';
-import ButtonLike from '../../components/ButtonLike/ButtonLike';
-import ButtonPlusMinus from '../../components/ButtonPlusMinus/ButtonPlusMinus';
+import { ButtonLike } from '../../components/ButtonLike/ButtonLike';
+import { ButtonPlusMinus } from '../../components/ButtonPlusMinus/ButtonPlusMinus';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useAction';
 import { useLocation } from 'react-router-dom';
 
-export const CartOfProduct = () => {
+export const CartOfProduct: React.FC = () => {
   const {
     data: { item },
   } = useTypedSelector((state) => state);
   const { data__getProductById } = useActions();
   let location = useLocation();
-  let id = location.search.slice(4);
-  console.log(id);
+  let id = Number(location.search.slice(4));
   useEffect(() => {
     data__getProductById(id);
   }, []);
@@ -39,7 +38,7 @@ export const CartOfProduct = () => {
               <div className="basket__item-menu">
                 <p className="basket__item-prise">${item.price.value}</p>
                 <ButtonPlusMinus />
-                <ButtonLike like={item.like} />
+                <ButtonLike id={location.search.slice(4)} like={item.like} />
               </div>
             </div>
           </div>

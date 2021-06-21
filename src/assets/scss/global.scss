@@ -71,6 +71,11 @@ select {
   border: none;
   background-color: inherit;
 }
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
@@ -87,4 +92,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   padding: 0 24px;
+}
+.conteiner {
+  margin: 0 auto;
 }

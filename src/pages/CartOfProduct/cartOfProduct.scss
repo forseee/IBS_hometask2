@@ -1,6 +1,4 @@
-.conteiner {
-  margin: 0 auto;
-}
+
 .basket__item {
   display: flex;
 }
@@ -41,42 +39,7 @@
   margin-right: 16px;
   margin-bottom: 16px;
 }
-.basket_btns {
-  display: flex;
-}
-.btn__one {
-  display: flex;
-}
-.btn__minus {
-  border: 1px solid #323232;
-  padding: 9px 9px;
-}
-.btn__input {
-  border: 1px solid #323232;
-  margin: 0 -1px;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  width: 100px;
-}
-.btn__plus {
-  border: 1px solid #323232;
-  padding: 9px 9px;
-}
-.basket__btn-add {
-  background-color: #e97f03;
-  padding: 3px 20px;
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 28px;
-  border-radius: 10px;
-  margin: 0 16px;
-  transition: all 0.3s;
-}
-.basket__btn-add:hover {
-  background-color: #e99330;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+
 @media (max-width: 890px) {
   .basket__item-menu {
     display: block;

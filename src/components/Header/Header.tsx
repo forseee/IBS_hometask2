@@ -8,10 +8,10 @@ import { useActions } from '../../hooks/useAction';
 const Header = () => {
   const [input, setInput] = useState('');
   const dispatch = useActions();
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setInput(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     dispatch.app__filterProductsByName(input);
   };
@@ -24,10 +24,10 @@ const Header = () => {
             <form onSubmit={handleSubmit}>
               <input
                 className="header__search"
+                onChange={handleChange}
+                placeholder="Search products"
                 value={input}
                 type="text"
-                placeholder="Search products"
-                onChange={handleChange}
               />
             </form>
             <div className="header__items">

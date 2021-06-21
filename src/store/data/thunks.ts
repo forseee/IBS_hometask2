@@ -1,5 +1,5 @@
 import { GetState } from '../index';
-import { app__filterProductsByName, data__setCartOfProduct, data__setProducts } from './actions';
+import { data__setCartOfProduct, data__setProducts, app__filterProductsByName } from './actions';
 import { API } from '../../API';
 
 /**
@@ -19,6 +19,7 @@ export const data__getProducts = () => async (dispatch: any, getState: GetState)
  */
 export const data__getProductById = (id: number) => async (dispatch: any, getState: GetState) => {
   dispatch(data__setCartOfProduct(null));
+  dispatch(app__filterProductsByName(''));
   try {
     const item = await API.items.getById(id);
     dispatch(data__setCartOfProduct(!!item ? item : null));

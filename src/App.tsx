@@ -4,8 +4,7 @@ import Header from './components/Header/Header';
 import { Products } from './pages/Products/Products';
 import { CartOfProduct } from './pages/CartOfProduct/CartOfProduct';
 
-const App = (props: any) => {
-  console.log(props);
+const App = () => {
   return (
     <>
       <Header />

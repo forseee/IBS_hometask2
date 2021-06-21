@@ -1,9 +1,8 @@
-import { ApiItems } from '../../API/posts';
 import { IItem } from '../../models/post';
 import { DataAction, IDataActionTypes } from './types';
 
 const initialState = {
-  items: [] as Array<IItem> ,
+  items: [] as Array<IItem>,
   item: null as IItem | null,
   filter: '' as string,
 };
@@ -19,6 +18,15 @@ export const dataReducer = (state = initialState, action: DataAction): IDataStat
       return {
         ...state,
         filter: action.payload,
+      };
+    case IDataActionTypes.FILTER__LIKE__DISLIKE:
+      return {
+        ...state,
+        items: state.items.map((item) => {
+          if (item.id === action.payload) {
+            return { ...item, like: !item.like };
+          } else return item;
+        }),
       };
     default:
       return state;
